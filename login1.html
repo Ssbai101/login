@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        <!--清除边距-->
+        * {
+        margin:0;
+        padding:0;
+        }
+        /*更改默认值*/
+        html,body {
+        width:100%;
+        height:100%;
+        }
+        /*背景图*/
+        .main{
+            width: 100%;
+            height: 100%;
+            background: url("./img/timg.jpg" )  no-repeat;  
+            background-size: cover;
+            
+        }
+        /*让输入框居中*/
+        .loginFrame{
+            width: 700px;
+            height: 400px;
+            position: fixed;
+            background: rgba(0, 0,0, 0.3);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            /*添加边框圆角*/
+            border-radius: 10px;
+            /*添加边框挤下去*/
+            padding:50px 0;
+            box-sizing: border-box;
+            /*添加阴影*/
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+        }
+         /*改变盒子的输入框的位置*/
+        .loginFrame > div{
+            width: 350px;
+            height: 50px;
+            margin: 40px auto;
+
+            color: white;
+        }
+        /*改变标题居中，并改变颜色*/
+        .loginFrame > p{
+            text-align: center;
+            color: white;
+            font-size: 25px;
+        }
+        /*改变输入框文字*/
+        .loginFrame > div > span{
+            display: inline-block;
+            cursor: pointer;
+        }
+         
+        /*改变输入框样式*/
+        .loginFrame >div input{
+            width: 100%;
+            height: 30px;
+            /*透明色*/
+            background: transparent;
+            /*清除默认边距*/
+            border: none;
+            /*添加底部边距*/
+            border-bottom: 1px solid white;
+            /*清除文字边框*/
+            outline: none;
+            /*改变文字颜色*/
+            color: white;
+        }
+        /*设置登录按钮边框样式*/
+        .loginFrame .enterBut{
+            width: 200px;
+            height: 50px;
+            border-radius: 50px;
+            /*设置背景颜色 渐变*/
+            background-image: linear-gradient(to right,#c979d4,#fa719d);
+            text-align: center;
+            padding-top: 10px;
+            box-sizing: border-box;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        /*给登录按钮添加 鼠标放上去的效果*/
+        .loginFrame .enterBut:hover{
+            box-shadow:0 0 10px rgba(0, 0,0, 0.5) inset;
+
+        }
+
+        /*给输入框提醒文字改变颜色*/
+        input::-webkit-input-placeholder{
+            color: #bdcada;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        结构编写
+    -->
+    <div class="main">
+        <div class="loginFrame">
+            <!--标题-->
+            <p class="loginTitle">BIQ小区物业管理系统</p>
+            <!--用户名-->
+            <div class="user">
+                <label>
+                    <!--用于占位，方便添加图标-->
+                    <span></span>
+                    <span>用户名</span>
+                    <!--输入框-->
+                    <input type="text" placeholder="     UserName"/>
+                </label>
+            </div>
+            <!--密码-->
+            <div class="password">
+                <label>
+                    <!--用于占位，方便添加图标-->   
+                    <span></span>
+                    <span>密码</span>
+                    <!--输入框-->
+                    <input type="password" placeholder="     PassWord"/>
+                </label>
+            </div>
+            <!--登录按钮-->
+            <div class="enterBut">
+                <span>登入</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
